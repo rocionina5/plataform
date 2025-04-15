@@ -1,0 +1,61 @@
+.text-unpa {
+    color: #97c93e !important;
+}
+
+.btn-unpa {
+    background-color: #97c93e !important;
+    color: white;
+}
+
+.btn-unpa:hover {
+    background-color: #82ad36;
+}
+
+#header img {
+    width: 80px;
+    border-radius: 3px;
+}
+
+#main .carousel-inner img {
+    /*el 70% del alto de la pantalla*/
+    max-height: 70vh;
+    object-fit: hover;
+    filter: grayscale(70%);
+}
+
+#carousel {
+    position: relative;
+}
+
+#carousel .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    color: white;
+}
+
+#carousel .overlay .container,
+#carousel .overlay .row {
+    height: 100%;
+}
+
+#placeTime {
+    margin-top: 1em;
+    background-color: #343a40;
+    color: white;
+}
+
+#placeTime img {
+    max-width: 100%;
+}
+
+footer {
+    background: linear-gradient(90deg, #05537a, #0532ac 25%, #012355);
+}
+
+footer a {
+    color: white;
+}

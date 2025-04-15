@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .text-unpa {
+        color: #97c93e !important;
+      }
+
+      .btn-unpa {
+        background-color: #97c93e !important;
+        color: white;
+      }
+
+      .btn-unpa:hover {
+        background-color: #82ad36;
+      }
+
+      #header img {
+        width: 80px;
+        border-radius: 3px;
+      }
+
+      #main .carousel-inner img {
+        /*el 70% del alto de la pantalla*/
+        max-height: 70vh;
+        object-fit: hover;
+        filter: grayscale(70%);
+      }
+
+      #carousel {
+        position: relative;
+      }
+
+      #carousel .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgb(0, 0, 0, 0.5);
+        color: white;
+      }
+
+      #carousel .overlay .container,
+      #carousel .overlay .row {
+        height: 100%;
+      }
+
+      #placeTime {
+        margin-top: 1em;
+        background-color: #343a40;
+        color: white;
+      }
+
+      #placeTime img {
+        max-width: 100%;
+      }
+
+      footer {
+        background: linear-gradient(90deg, #05537a, #0532ac 25%, #012355);
+      }
+
+      footer a {
+        color: white;
+      }
+    </style>
+
+    <title>INTJEM</title>
+  </head>
+
+  <body
+    data-bs-spy="scroll"
+    data-target="#navbar"
+    data-bs-offset="106"
+    tabindex="0"
+  >
+    <!-- Header-->
+    <nav
+      id="header"
+      class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="img/logitjem.jpg" alt="logo intjem" /> Instituto Tecnico
+          "Jesus Maria"
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar"
+          aria-controls="navbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#main">INICIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#main"
+                >QUIENES SOMOS?</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#placeTime">ADMISION</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#placeTime">NUESTRAS CARRERAS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#placeTime">PLATAFORMA VIRTUAL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#convierteEnOrador"
+                >Conviertete en orador</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-unpa"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#modalRegistro"
+                >Registro al evento</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Fin del Header-->
+
+    <!--main-->
+    <main id="main">
+      <div
+        id="carousel"
+        class="carousel slide carousel-inner"
+        data-bs-ride="carousel"
+        data-pause="false"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="img/sistemas.jpg"
+              class="d-block w-100"
+              alt="entrada unpa"
+            />
+          </div>
+          <div class="carousel-item">
+            <img src="img/secre.png" class="d-block w-100" alt="pasillo unpa" />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="img/tele.jpg"
+              class="d-block w-100"
+              alt="Benito Juarez unpa"
+            />
+          </div>
+          <div class="overlay">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-md-6 offset-md-6 text-center text-md-right">
+                  <h1>INTJEM</h1>
+                  <a href="#convierteEnOrador" class="btn btn-outline-light"
+                    >CONOCE NUESTRAS CARRERAS</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- fin del main-->
+
+    <!-- speakers u oradores-->
+    <section id="speakers" class="mt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center text-uppercase">
+            <small>CONOCE MAS DE NUESTRAS</small>
+            <h2>CARRERAS</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="card">
+              <img
+                src="img/sistemas.jpg"
+                class="card-img-top"
+                alt="foto de Rendon"/>
+
+              <div class="card-body ">
+                <div class="badges ">
+                    <h2 class="bg-info text-dark fs-4 text-center">SISTEMAS INFORMATICOS</h2>
+                </div>
+                <p class="card-text text-center">
+                  Formar profesionales que promueven el cuidado de la Madre
+                  Tierra y el Cosmos, conociendo el desarrollo y administración
+                  de sistemas informáticos, con habilidades en la operación de
+                  software ofimático, utilitarios de base, manipulación de
+                  metodologías, para prestar servicios y soluciones en
+                  organizaciones públicas y privadas.
+                </p>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                <a class="btn btn-outline-primary items-center" href="/index2.html">Conoce más</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="card">
+              <img
+                src="img/secretariado.webp"
+                class="card-img-top"
+                alt="foto de Fabian"
+              />
+              <div class="card-body">
+                <div class="badges">
+                    <h2 class="bg-info text-dark fs-4 text-center">SECRETARIADO EJECUTIVO</h2>
+
+                  
+                  <p class="card-text text-center">
+                    Formar profesionales productivos, emprendedores,
+                    pertinentes, con una sólida formación científica, técnica,
+                    tecnológica y social, en el manejo de la
+                    ofimática y la organización de eventos e
+                    itinerarios, en habilidades de toma de decisiones,
+                    archivística, redacción y manejo de la gestión documental,
+                    supervisión de caja chica.
+                  </p>
+                  <div class="d-grid gap-2 col-6 mx-auto">
+                
+                    <a class="btn btn-outline-primary items-center" href="#">Conoce más</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="card">
+              <img
+                src="img/tele.jpg"
+                class="card-img-top"
+                alt="foto de Ariel"
+              />
+              <div class="card-body">
+                <div class="badges">
+                    <h2 class="bg-info text-dark fs-4 text-center">TELECOMUNICACIONES</h2>
+                  
+                  <p class="card-text text-center">
+                    Formar Profesionales idóneos en el área de
+                    Telecomunicaciones a nivel de Técnico Superior, con
+                    conocimientos sólidos teóricos y prácticos para que sean
+                    capaces de desenvolverse eficientemente, las necesidades de
+                    instalación y mantenimiento de equipos, utilizando conocimientos y herramientas de
+                    última generación.
+                  </p>
+                  <div class="d-grid gap-2 col-6 mx-auto">
+                
+                    <a class="btn btn-outline-primary items-center" href="#">Conoce más</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- fin de speakers u oradores-->
+     
+    <!-- lugar y fecha-->
+    <section id="placeTime">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-lg-6 pl-0 pr-0">
+            <img
+              src="img/fondo2.jpg"
+              class="col-12 col-lg-12"
+              alt="Auditorio"
+            />
+          </div>
+          <div class="col-12 col-lg-6 pt-4 pb-4">
+            <h3>CARERAS</h3>
+            <a class="btn btn-outline-light" href="#">Conoce más</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- fin lugar y fecha-->
+
+    <!-- conviertete en orador -->
+    <section id="convierteEnOrador" class="pt-3 pb-3">
+      <div class="container">
+        <div class="row">
+          <div class="col text-uppercase text-center">
+            <h2>Regístrate como orador</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center">Cuéntanos de qué quieres hablar!</div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2">
+            <form id="speakerForm" onsubmit="return validateSpeakerForm()">
+              <div class="form-row">
+                <div class="form-group col-12 col-md-6">
+                  <label for="firstName">Nombre</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    placeholder="Nombre"
+                    required
+                  />
+                </div>
+                <div class="form-group col-12 col-md-6">
+                  <label for="lastName">Apellido</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    placeholder="Apellido"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col">
+                  <label for="topic">Sobre qué quieres hablar?</label>
+                  <textarea
+                    id="topic"
+                    class="form-control form-control-lg"
+                    placeholder="Sobre qué quieres hablar?"
+                    required
+                  ></textarea>
+                  <small class="form-text text-muted"
+                    >Recuerda incluir un título para tu charla</small
+                  >
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col d-grid gap-2">
+                  <button type="submit" class="btn btn-unpa btn-block">
+                    Enviar
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- fin de conviertete en orador-->
+
+    <!-- Footer-->
+    <footer id="footer" class="pb-4 pt-4">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-12 col-lg">
+            <a href="#">Preguntas frecuentes</a>
+          </div>
+          <div class="col-12 col-lg">
+            <a href="#">Contáctanos</a>
+          </div>
+          <div class="col-12 col-lg">
+            <a href="#">Prensa</a>
+          </div>
+          <div class="col-12 col-lg">
+            <a href="#">Términos y condiciones</a>
+          </div>
+          <div class="col-12 col-lg">
+            <a href="#">Privacidad</a>
+          </div>
+          <div class="col-12 col-lg">
+            <a href="#">Estudiantes</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Fin del footer-->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modalRegistro"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">
+              Registro al Evento
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form
+              id="registrationForm"
+              onsubmit="return validateRegistrationForm()"
+            >
+              <div class="form-row">
+                <div class="form-group col">
+                  <label for="email">Correo electrónico</label>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Correo electrónico"
+                      aria-label="Correo electrónico"
+                      aria-describedby="basic-addon1"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="alert alert-warning" role="alert">
+                Gracias por tu registro! Recibirás un correo de confirmación
+                para darle seguimiento a tu asistencia al evento.
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cancelar
+                </button>
+                <button type="submit" class="btn btn-unpa">Registrarse</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fin del Modal-->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function validateSpeakerForm() {
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+        const topic = document.getElementById("topic").value;
+
+        if (!firstName || !lastName || !topic) {
+          alert("Por favor, completa todos los campos.");
+          return false;
+        }
+        alert("Formulario enviado correctamente.");
+        return true;
+      }
+
+      function validateRegistrationForm() {
+        const email = document.getElementById("email").value;
+
+        if (!email) {
+          alert("Por favor, ingresa tu correo electrónico.");
+          return false;
+        }
+        alert("Registro exitoso. Revisa tu correo para más detalles.");
+        return true;
+      }
+    </script>
+  </body>
+</html>
